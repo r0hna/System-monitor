@@ -47,9 +47,8 @@ def host_scan():
 @monitorApp.route('/portscan', methods=["GET"])
 def port_scan():
     if request.method == 'GET':
-        ip = int(request.args.get('ip'))
-        type_ip = type(ip).__name__
-        if  type_ip == 'int':
+        ip = request.args.get('ip')
+        if  ip:
             from agents.port_scan import scan
             return jsonify(scan())
         return jsonify({"Server": "Parameter value is not found or data type not supported!", "Recommendation": "Check out the API documentation!"})
