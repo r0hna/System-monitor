@@ -1,5 +1,7 @@
 # Code-Xccelerate 2025 Hackathon project
 
+⚠️Tested on: `Windows 11`
+
 ### Install
       pip install -r requirements.txt
 
